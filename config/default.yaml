@@ -1,8 +1,8 @@
 kernel:
   name: "linux"
-  version: "6.1"
+  version: "6.12"
   repository: "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git"
-  branch: "linux-6.1.y"
+  branch: "linux-6.12.y"
   
 build:
   arch: "arm64"
