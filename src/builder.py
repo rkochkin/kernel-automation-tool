@@ -47,8 +47,8 @@ class KernelBuilder:
 
     def _prepare_source(self):
         """Clone or update kernel source"""
-        os.makedirs("kernels", exist_ok=True)
-        source_dir = os.path.join("kernels", self.config.kernel.name)
+        os.makedirs("build/kernels", exist_ok=True)
+        source_dir = os.path.join("build/kernels", self.config.kernel.name)
 
         print(f"Cloning repository: {self.config.kernel.repository}")
         self.source_dir = self.git_manager.clone_repository(source_dir)

@@ -16,7 +16,7 @@ device_trees:
   
 modules:
   enabled: true
-  install_path: "./modules"
+  install_path: "./output/modules"
   
 patches:
   - "patches/example.patch"
