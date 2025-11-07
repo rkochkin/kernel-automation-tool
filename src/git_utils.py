@@ -40,6 +40,7 @@ class GitManager:
             )
             current_branch = result.stdout.strip()
             
+            subprocess.run(['git', 'reset','--hard', self.branch], cwd=repo_dir, check=True)
             if current_branch != self.branch:
                 subprocess.run(['git', 'checkout', self.branch], cwd=repo_dir, check=True)
             
