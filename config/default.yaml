@@ -1,0 +1,27 @@
+kernel:
+  name: "linux"
+  version: "6.1"
+  repository: "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git"
+  branch: "linux-6.1.y"
+  
+build:
+  arch: "arm64"
+  output_dir: "./output"
+  config_file: "defconfig"
+  make_target: "all"
+  
+device_trees:
+  - "arm64/foundation-v8.dts"
+  - "arm64/arm/fvp-base-revc.dts"
+  
+modules:
+  enabled: true
+  install_path: "./modules"
+  
+patches:
+  - "patches/example.patch"
+  
+environment:
+  make_jobs: 8
+  cc: "aarch64-linux-gnu-gcc"
+  cross_compile: "aarch64-linux-gnu-"
